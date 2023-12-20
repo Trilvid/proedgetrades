@@ -1,0 +1,9 @@
+body{
+	font-family: 'Montserrat';
+}
+#mob_all{
+	/*overflow: scroll;*/
+}
+.admin_link_cont{
+	overflow: auto;
+}

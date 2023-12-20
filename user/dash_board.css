@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Happy+Monkey&family=Ubuntu:wght@300;400;500;600;700&display=swap');
+
+html {
+	overflow: scroll;
+	}
+	
+	::-webkit-scrollbar {
+	width: 0px;
+	background: transparent; /* make scrollbar transparent */
+	}
+
+:root {
+    --pri-color: #FEAE00;
+    --sec-color:  #0c151a;
+    --facebook-color: #0F0F0F;
+    --font: "Poppins";
+    --mild-color: gray; 
+    --transparent:  rgba(0, 0, 0, 0.7);
+}
+body{
+		margin: 0px;
+		font-family: var(--font);
+	}
+
+	#closex{
+		display: none;
+	}
+	.dashboard_container{
+		display: flex;
+		flex-direction: row;
+		/* height: 100%; */
+		background-color: var(--facebook-color);
+
+	}
+	.nav_cont{
+		top: 0px;
+		width: 350px;
+		overflow: auto;
+		background-color: var(--facebook-color);
+	}
+	.load_cont{
+		width: 100%;
+		overflow-x: hidden;
+		overflow-y: auto;
+		background-image: url();
+		padding: 0px;
+	}
+
+	.inner_load_cont{
+		padding: 10px;
+		box-sizing: border-box;
+	}
+
+	.inner_load_cont section{
+		margin: 0px;
+	}
+
+	.top_nav{
+		background: var(--facebook-color);
+		padding: 15px 5px 15px 5px;
+		position: sticky;
+		top: 0px;
+		left: 0px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		color: var(--sec-color);
+		z-index:43 ;
+		box-shadow: 0px 0px 2px gray;
+		height: 40px;
+	}
+	#copied{
+	display: none;
+	position: absolute;
+	top: 50px;
+	right: 20px;
+	background: green;
+	color: white;
+	padding: 15px;
+}
+#copy_ref{
+	cursor: pointer;
+	font-size: 16px;
+}
+	.area_txt_cont{
+		background: var(--facebook-color);
+		box-shadow: 0px 0px 2px gray;
+		margin-top: 20px;
+	}
+	.area_txt{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 20px;
+		box-sizing: border-box;
+	}
+	.area_txt span:nth-of-type(2) i{
+		padding: 20px;
+		color: var(--sec-color);
+		cursor: pointer;
+	}
+	.area_txt b{
+		font-size: 1.6em;
+		font-family: var(--font);
+		font-weight: 500;
+		text-transform: uppercase;
+	}
+	.quick_action{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		display: none;
+		padding: 10px 0px 20px 0px;
+	}
+	.quick_action span{
+		margin: 10px;
+		padding: 7px;
+		border-radius: 10px;
+		color: var(--sec-color);
+	}
+	.quick_action a{
+		text-decoration:none;
+	}
+	.quick_action span i{
+		margin-right: 10px;
+	}
+	.overview_cont{
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		justify-content: center;
+		background: var(--facebook-color);
+	}
+	.overview_cont section{
+		margin: 5px;
+	}
+	.overview_cont section b {
+		padding: 10px;
+		box-sizing: border-box;
+		font-weight: 500;
+		font-size: 1.4em;
+	}
+	.overview{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.overview section{
+		width: 220px;
+		background: var(--facebook-color);
+		height: 120px;
+		margin: 10px;
+		padding: 3px 0px 3px 2px;
+		border-radius: 10px;
+		box-shadow: 0px 0px 4px gray;
+		display: flex;
+		flex-direction: column;
+		justify-content:space-between;
+	}
+	.overview:nth-of-type(3) {
+		padding: 10px;
+		box-sizing: border-box;
+	}
+
+	.overview section span{
+		margin: 10px;
+	}
+
+	.overview section span i{
+		margin-right: 8px;
+		color: var(--mild-color);
+	}
+	.overview section span:nth-of-type(1){
+		font-weight: 600;
+		font-size: 13px;
+		color: var(--pri-color);
+	}
+
+	.overview section span:nth-of-type(2){
+		font-size: 21px;
+		font-weight: 600;
+		text-transform: uppercase;
+		color:var(--mild-color);
+	}
+	#tip{
+		font-size: 16px;
+		text-indent: 10px;
+		color: var(--sec-color);
+		display:none;
+	}
+
+	.action_center_cont{
+		background: var(--facebook-color);
+		box-shadow: 2px 1px 2px 2px rgba(0, 0, 0, 0.2);
+		border-radius: 10px;
+	}
+
+	.action_center{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+	}
+
+	.action_center section{
+		width: 200px;
+		background: white;
+		margin: 5px;
+		padding: 10px;
+		border-radius: 10px;
+		box-shadow: 2px 1px 1px rgba(0, 0, 0, 0.2);
+		display: flex;
+		flex-direction: column;
+	}
+
+	.action_center section span{
+		margin-bottom: 10px;
+	}
+
+	.action_center section span a{
+		text-decoration: none;
+	}
+
+	.action_center section span:nth-of-type(1){
+		font-size: 13px;
+		font-weight: bold;
+	}
+
+	.action_center section span:nth-of-type(2){
+	font-size: 18px;
+	}
+
+	.dash_api_cont{
+		background: var(--facebook-color);
+		border: 1px solid gray;
+		justify-content: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+	
+	.dash_api_cont p b{
+		font-size: 1.2em;
+		text-transform: capitalize;
+		font-weight: 600;
+	} 
+	.dash_api_cont p{
+		padding-left: 30px;
+	}
+	.chartHolder {
+		width: 100%;
+		padding: 10px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+	.chartText {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 90%;
+	}
+	.chartText span {
+		width: 30%;
+	}
+	.chartText span:nth-child(1) {
+		width: 20%;
+		padding: 0%;
+		padding-left: 10px;
+		align-self: center;
+		text-align: center;
+	}
+	.chartText span p {
+		color: var(--mild-color);
+		line-height: 0.5;
+	}
+	.chartSect {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+		align-content: center;
+		padding: 10px;
+		box-sizing: border-box;
+	}
+	.chartSect .chartDiv {
+		width: 70%;
+		height: 95vh;
+	}
+	.chartSect .buySell {
+		width: 30%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	form{
+		width: 90%;
+		padding: 5px;
+		box-sizing: border-box;
+	}
+	.chartSect .buySell form .form_cont {
+		margin: 5px;
+		box-sizing: border-box;
+		width: 100%;
+		padding: 5px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		color: var(--mild-color);
+	}
+	.form_cont > select, input {
+		padding: 9px;
+		background-color: inherit;
+		color: var(--mild-color);
+		text-transform: capitalize;
+		border-radius: 5px;
+		border: 0px;
+		background-color: #0c151a;
+	}
+	.form_cont button {
+		padding: 10px;
+		width: 70%;
+		color: white;
+		font-weight: bold;
+		font-family: var(--font);
+		border: 0px;
+	}
+	#buy {
+		background-color: green;
+	}
+	#sell {
+		background-color: red;
+	}
+	input[type="number"]::-webkit-inner-spin-button,
+	input[type="number"]::-webkit-outer-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
+	input[type="number"] {
+		-moz-appearance: textfield;
+	}
+	select {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		padding: 8px;
+		border-radius: 5px;
+	}
+
+	/* Style for when select is focused */
+	select:focus {
+		outline: none;
+	}
+	input:focus {
+		outline: none;
+	}
+
+
+
+	/* styles for the confirm deposit */
+	.overview_cont {
+		margin-top: 30px !important;
+		padding: 10px !important;
+		box-sizing: border-box !important;
+		background-color: var(--facebook-color) !important;
+	}
+	.overview_cont section{
+		margin: 5px;
+		color: var(--mild-color);
+	}
+	.area_txt_cont {
+		background-color: var(--facebook-color) !important;
+		color: var(--mild-color);
+	}
+	.overviewx{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.overviewx section{
+		background: var(--facebook-color);
+		margin: 5px;
+		padding: 10px;
+		border-radius: 10px;
+		border: 1px solid black;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		color:white;
+		align-items:center;
+	}
+	.overviewx section span table{
+		margin:10px;
+		box-sizing: border-box;
+	}
+	.overviewx section span table tr{
+		color:var(--mild-color);
+		text-align:center;
+		border: 0px;
+	}
+	.overviewx section span table tr td{
+		font-size:15px;
+		font-family:arial;
+		padding:10px;
+		border: 0px;
+	}
+	.overviewx section span img{
+		width:200px;
+		height:200px;
+	}
+
+
+
+@media only screen and (max-width: 640px){
+		.overview{
+		justify-content: center;
+	}
+	.area_txt b{
+		font-size: 1.3em;
+	}
+	.overview section{
+		width: 100%;
+	};
+	.chartHolder {
+		padding: 0%;
+	}
+	.chartText {
+		width: 100%;
+	}
+	.chartText span {
+		width: 50%;
+	}
+	.chartText span:nth-child(1) {
+		width: 40%;
+	}
+	.chartSect {
+		width: 98%;
+		flex-direction: column;
+		padding: 0%;
+		margin: auto;
+		box-sizing: border-box;
+		margin: 0%;
+	}
+	.chartSect .chartDiv {
+		width: 100%;
+		height: 95vh;
+	}
+	.chartSect .buySell {
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 500px){
+		.overview section{
+		width: 100%;
+		padding: 10px 0px 10px 0px;
+	}
+	.action_center section{
+		width: 100%;
+	}
+	}
+
+
+@media only screen and (max-width: 500px){
+	.overviewx section{
+		width: 90%;
+}
+.action_center section{
+	width: 100%;
+}
+.overviewx section span {
+	color:var(--mild-color);
+	text-align:center;
+	box-sizing:border-box;
+}
+.overviewx section span table tr td{
+	margin-left: 0px;
+	box-sizing:border-box;
+	padding: 10px;
+}
+}
+@media only screen and (max-width: 800px){
+	.overviewx{
+	justify-content: center;
+}
+.area_txt_cont {
+	margin-bottom: 20px !important;
+}	
+.overviewx section{
+	flex-direction:column;
+	margin-top: 20px;
+}
+.overviewx section span img{
+	width:100px;
+	height:100px;
+}
+}
+@media only screen and (max-width: 600px){
+	.overviewx{
+	justify-content: center;
+}
+.overviewx section{
+	width:;
+}
+}
+
+
+    /* Verified div container */
+    .verify_cont{
+        background: rgba(0, 0, 200, 0.9);
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 99999999999;
+    }
+    .verify_cont section{
+        text-align: center;
+        margin-top: 30px;
+        color: white;
+        font-size: 16px;
+        padding: 10px;
+    }
+    .verify_cont section p{
+        font-size: 21px;
+    }
+    .verify_cont section form input[type="submit"]{
+        padding: 15px;
+        font-size: 18px;
+        background: rgba(255, 0, 0, 0.8);
+        border: 0px;
+        border-radius: 10px;
+        color: white;
+        cursor: pointer;
+    }
+
+
+
+
+
+
+
+
+
+
+
+	@media only screen and (max-width: 700px){
+	.nav_cont{
+		position: fixed;
+		top: 0px;
+		left: -100%;
+		height: 100%;
+		z-index: 99;
+	}
+	}
